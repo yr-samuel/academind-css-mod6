@@ -1,13 +1,11 @@
-### Criando uma barra de navegação fixa
+### Usando position para adicionar uma imagem como background.
 
-* No seletor da header, colocamos as seguintes propriedades CSS:
+* Primeiro de tudo, adicionamos a imagem para o projeto.
 
-        {
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
+* Em seguida, adicionamos uma div, para que pudessemos mostrar a imagem.
 
-* Foi definido o *top* e o *left*, pois caso algum elemento pai desse elemento aplique algum estilo não cause conflito com esse nosso elemento fixo.
+* Já no CSS, selecionamos a div através da classe *.background*, definimos seu background passando a url da imagem que adicionamos no projeto, após isso colocamos __position: fixed__.
 
-* Nessa aula, aplicamos o position __fixed__, e vimos que tanto na página principal quanto na de pacotes de hospedagem, a imagem da principal e um pouco do card da de pacotes ficaram por de baixo do header, mas isso será resolvido em alguma próxima aula.
+* De praxe, definimos o *top* e *left* como 0, e como sabemos o fixed se referencia a viewport, e a viewport tem um tamanho especificado de height, logo conseguimos usar 100% tanto para width quanto para height, assim fazendo com que a imagem preenchesse toda a página.
+
+* Porém, contudo, entretanto, todavia, a imagem ficou por cima de tudo (cards), e para resolver isso veremos sobre a propriedade __z-index__ na próxima aula.
